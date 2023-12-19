@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>변수의 개념과 활용</title>
+  <style>
+    .p01{background: #c00; color: #fff; display: inline;}
+    .p02{
+      background: #ff0; color: #00f; 
+      display: inline-block; line-height: 40px; font-weight: bold;}
+  </style>
+  <script>
+    //1. 변수선언하기
+    let box;
+
+    //2. 변수에 데이터 저장하기 = 입력
+    box = '변수를 사용하여 데이터 출력하기'
+    box = '변수데이터는 마지막에 들어간 데이터만 남는다.<br>'
+
+    //3. 변수 데이터 출력하기
+    document.write('<p class="p01">'+box+'</p>');
+
+    //4. 변수 선언: 여러개의 변수를 동시에 선언 할 수 있음
+    let a, b;
+
+    //5. 변숭 ㅔ데이터 값 저장하기
+    a=10;
+    b=100;
+
+    //6. 데이터 출력하기
+    document.write(a+'<br>');
+    document.write('<hr>');//줄바꿈
+    document.write(b+'<br>');
+    // + 는 앞 뒤가 숫자일때는 연산/ 문자+숫자, 문자+문자일 때는 결합으로 쓰임
+    // 문자열 결합연산자 '+' : 문자와 문자를 연결 할 때, 문자와 숫자를 연결 할 때 사용
+    // 산술연산자 '+' : 숫자와 숫자를 더하여 합산하고자 할 대 사용
+
+    // 7. let, const 차이점 확인하기
+
+    //8. 변수에 데이터 저장하고 출력연습하기
+    // let txt01 = prompt('숫자를 입력하세요');
+
+    // //출력하기
+    // document.write(txt01);
+    // document.write('<p>당신은'+txt01+'년 후 실력있는 개발자가 되실겁니다.');
+
+    //실습예제. name변수를 생성하고 사용자가 이름을 입력, region변수를 생성하여 사는 지역을 사용자가 직접 입력할 수 있도록하고, 아래의 문장처럼 출력하시오.
+    // '철수'가 사는 지역은 '부산'입니다. 글자색상은 파랑, 배경색은 노랑으로 서식 적용
+
+    let name, region;
+
+    name = prompt('이름을 입력하세요.');
+    region = prompt('사는 지역을 입력하세요.');
+
+
+    document.write('<p class="p02">'+name+'님이 사는 지역은 '+region+'입니다.</p>');
+
+
+  
+
+  </script>
+</head>
+<body>
+  <h2>01_변수의 개념과 활용</h2>
+  <p>변수(variable)란? 변하는 데이터를 저장하기 위한 일종의 메모리 공간이다.</p>
+  <p>변수에 대입된 값은 항상 마지막에 저장된 값이 출력이 된다.</p>
+
+  <h3>1. 변수의 종류</h3>
+  <p>(1)지역변수 : 문서전체에 영향을 주는 변수</p>
+  <p>(2)지역변수 : 함수(function)내에서 선언되어 사용되는 변수로서 그 함수 지역에서만 영향력을 가지는 변수(지역화폐개념)</p>
+
+  <pre>
+    let a = 10;     //전역변수
+
+    function 함수명(){
+      let b = 5;   // 지역변수
+    }
+  </pre>
+
+  <h3>2. 변수의 선언방법</h3>
+  <p>변수 선언시 'var', 'let', 'const' 키워드를 변수명 앞에 붙여 선언한다.</p>
+  <p>자바스크립트 최신버전 es6에서는 'let', 'const'사용을 추천한다</p>
+  <p>var 변수명; 또는 let 변수명; 또는 const 변수명;</p>
+  <p>예) var a=10; let b=50+23; const c=1000;</p>
+
+  <h3>3. 변수명 작성시 주의사항</h3>
+  <p>변수명을 작성하고자 할 때는 아래 사항을 주의해야 함</p>
+  <ul>
+    <li>변수명은 영문 대, 소문자로 작성되어야 한다. ex) var a; var A;</li>
+    <li>변수의 첫글자는 숫자,특수문자가 올 수 없음 ex)0ab 불가능</li>
+    <li>변수명 사이에는 스페이스(공백)을 사용 할 수 없음 ex) count_01 (count 01 불가능)</li>
+    <li>자바스크립트에서 사용하는 있는 언어(예약어: 색상이 변한느 단어)는 사용할 수 없음 (var, if, break 등)</li>
+    <li>변수명에는 특수기호를 사용 할 수 없음(eks, $와 '_'는 사용가능) #Aa, _Aa</li>
+    <li>변수명은 의미를 담을 수 있는 이름으로 지정하고, 일명 낙타봉(카멜)표기법으로 작성할 것을 권장한다. iamgename -> imageName, 스네이크 표기법(: 언더바 사용해서 이름 만들기snake_01)</li>
+  </ul>
+
+
+  <p>+ 는 앞 뒤가 숫자일때는 연산/ 문자+숫자, 문자+문자일 때는 결합으로 쓰임</p>
+  <p>문자열 결합연산자 '+' : 문자와 문자를 연결 할 때, 문자와 숫자를 연결 할 때 사용</p>
+  <p>산술연산자 '+' : 숫자와 숫자를 더하여 합산하고자 할 대 사용</p>
+
+  <p>let, const 차이점 확인하기</p>
+  <p>let : 수시로 변하는 데이터를 저장하기 위한 키워드</p>
+  <p>const : 고정된 값을 저장하기 위한 키워드</p>
+  <p>ex) conet on = document.elementById('light_on')에서 값 light_on은 바뀌지 않기 때문에 const 상수</p>
+  
+  
+  
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02_제어문(control)</title>
+  <style>
+    .txt01{
+      font-weight: bold; font-size: 20px; 
+    }
+    
+    .txt02{
+      font-weight: bold; color: #c00; font-size: 18px;
+    }
+  </style>
+  <script>
+    //변수선언
+    let a =10;
+    let b =20;
+
+    //1.if문
+    if(a==10){// a변수값과 10이 같은지
+      document.write('위 수식은<span class="txt01">참</span>입니다.<br>');
+    }
+
+    //2.else
+    if(b==10){// a변수값과 10이 같은지
+      document.write('위 수식은<span class="txt01">참</span>입니다.');
+    }else{
+      document.write('위 수식은 <span class="txt01">거짓</span>입니다<br>')
+    }
+
+    //3. else if
+    let jumsu = prompt('성적점수를 입력하세요 예)70점');
+    if(jumsu >= 90){
+      document.write(`당신이 입력한 성적 ${jumsu}는 <span class="txt02">수</span>입니다.`);
+    }else if(jumsu >= 80){
+      document.write(`당신이 입력한 성적 ${jumsu}는 <span class="txt02">우</span>입니다.`);
+    }else if(jumsu >= 70){
+      document.write(`당신이 입력한 성적 ${jumsu}는 <span class="txt02">미</span>입니다.`);
+    }else if(jumsu >= 60){
+      document.write(`당신이 입력한 성적 ${jumsu}는 <span class="txt02">양</span>입니다.`);
+    }else{
+      document.write(`당신이 입력한 성적 ${jumsu}는 <span class="txt02">가</span>입니다.`);
+    }
+
+    document.write('<hr>')
+    // 사용자가 입력한 숫자를 통해 짝수/홀수 판단하는 수식 만들기
+    let number = prompt('숫자를 입력하세요.');
+    if(number%2==0){
+      document.write('입력하신 숫자는 <span class="txt02">짝수</span>입니다.');
+    }else{
+      document.write('입력하신 숫자는 <span class="txt02">홀수</span>입니다.<br>');
+    }
+
+
+
+
+
+  </script>
+</head>
+<body>
+  <h2>제어문(control)</h2>
+  <p>제어문이란? 프로그램의 실행을 제어(control)하기 위해 사용하는 실행문으로서 <br>
+    1. 조건문(if, else, if else)<br>
+    2. 선택문(switch case)<br>
+    3. 반복문(while, do while, for)이 있다.</p>
+
+
+  <h3>1. 조건문 _ if, else, if else</h3>
+  <ul>
+    <li>if : 조건식이 만족 할 때만 실행되는 조건문이다.</li>
+    <li>else : 조건식이 만족하면 true, 만족하지 않으면 false가 나오도록 하는 조건문이다.</li>
+    <li>else if : 조건식이 여러개일 경우 다양한 결과값을 얻기 위한 조건문이다.</li>
+  </ul>
+  
+  <h3>if문 실습하기</h3>
+  <p>----경품 당첨식 ----경품<br>
+  등수별 상품 출력 : <br>
+  1. 숫자 1 or 1등 : "당첨!해외여행상품권"<br>
+  2. 숫자 2 or 2등 : "냉장고"<br>
+  3. 숫자 3 or 3등 : "상품권"<br>
+  4. 숫자 4 or 4등 : "꽝입니다!"</p><br>
+  
+<script>
+      let eve = prompt('등수를 입력하세요 예: 1 or 1등');
+    if((eve == 1) || (eve =='1등')){
+      document.write('<span class="txt01">당첨!해외여행상품권</span>');
+    }else if((eve == 2) || (eve =='2등')){
+      document.write('<span class="txt01">냉장고</span>');
+    }else if((eve == 3) || (eve =='3등')){
+      document.write('<span class="txt01">상품권</span>');
+    }else{
+      document.write('<span class="txt01">꽝입니다</span>');
+    }
+</script>
+
+<hr>
+
+
+</body>
+</html>
