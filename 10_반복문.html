@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>제어문 _ 03 반복문(while, do while, for)</title>
+</head>
+<body>
+  <h2>제어문 _ 03 반복문(while, do while, for)</h2>
+  <p>반복문은 작업을 반복 수행 할 때 사용하며, 조건문(if)이 프로그래믕ㄹ 지적으로 만든다면 반복문은 프로그램을 강력하게 만드는 역할을 한다</p>
+  <p>주의할점 : 조건을 잘못 설정하면 무한루프에 빠지는 오류가 생기며, 브라우저에 화면 멈춤현상이 발생함</p>
+  <ul>
+    <li>while : 반복조건</li>
+    <li>do while : 반복조건</li>
+    <li>for : 반복회수</li>
+  </ul>
+  <p>while문은 조건식을 먼저 만들고  do while문은 조건식을 뒤에 써줌</p>
+
+  <pre>
+    1. while문
+    while(조건식){
+      실행할 내용;
+    }
+
+    2. do while문
+    do{
+      실행할 내용
+    }
+    while(조건식)
+
+    3. for문
+    for(초기값;조건식;증감식){
+      실행할 내용;
+    }
+  </pre>
+
+  <hr>
+
+  <h3>실습1. 반복문을 사용하여 숫자 1부터 10까지 출력해보기</h3>
+  <script>
+    //1. while문
+    let n = 1; //초기값 변수 선언
+
+    while(n<=10){ //조건에 만족 할 때까지 반복 (n이 10이 될 때 까지 반복)
+      document.write(n +'&nbsp'); // 내용 출력
+      n++; //기존값에 1씩 더해서 출력
+    }
+
+      document.write('<br><br>');
+
+    //2. do while문
+    let n1 = 1;
+    do{
+      document.write(n1 +'&nbsp');
+      n1++;
+    }while(n1<=20);
+
+
+    document.write('<br><br>');
+
+    //3. for문
+    for(let n2=1; n2<=20;n2++){
+      document.write(n2+'&nbsp')
+    }
+  </script>
+
+  <hr>
+
+  <h3>실습2. 반복문을 활용해 구구단 출력하기(예. 2*1=2) </h3>
+  <script>
+    for(let a=2;a<=9;a++){
+      document.write('<p>----------- '+a+'단 -----------</p>');
+      for(let b=1;b<=9;b++){
+        document.write(a+'*'+b+'='+a*b);
+      }
+    }
+
+    document.write('<br>');
+  </script>
+
+  <h3>실습3. 반복문을 활용하여 테이블 태그 만들기</h3>
+  <script>
+    document.write('<table>');
+    document.write('<caption>요일</caption>');
+    // document.write('<tr><th>일</th></tr><tr><th>월</th></tr><tr><th>화</th></tr><tr><th>수</th></tr><tr><th>목</th></tr><tr><th>금</th></tr><tr><th>토</th></tr>');
+    document.write('<tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th>ㅊㅊ<th>토</th></tr>');
+
+    //조건문 활용하여 31일 초과 35까지 공백으로 표시하기
+    for(let day=1;day<=35;day++){
+      if (day%7==1){
+        document.write('<tr>');
+          document.write('<td>'+day+'</td>');
+          continue;
+      }
+      if(31<day&&day<=35){
+        document.write('<td>&nbsp;</td>');
+        continue;
+      }
+      if(day%7==0){
+        document.write('<td>'+day+'</td>');
+        document.write('</tr>')
+        continue;
+      }
+      document.write('<td>'+day+'</td>');
+    }
+    document.write('</table>');
+  </script>
+
+
+
+</body>
+</html>

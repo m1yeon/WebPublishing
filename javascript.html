@@ -4,21 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>자바스크립트 학습하기</title>
+  
+  <style>
+@font-face {
+    font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 700;
+    src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+    url('http://script.gmarket.com/fonts/GmarketSansBold.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('http://script.gmarket.com/fonts/GmarketSansBold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 500;
+    src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+    url('http://script.gmarket.com/fonts/GmarketSansMedium.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('http://script.gmarket.com/fonts/GmarketSansMedium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  @font-face {
+    font-family: 'Gmarket Sans';    font-style: normal;    font-weight: 300;
+    src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+    url('http://script.gmarket.com/fonts/GmarketSansLight.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+    url('http://script.gmarket.com/fonts/GmarketSansLight.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+
+
+    *{padding:0px; margin:0px; font-family: 'Gmarket Sans';}
+    ul, li{list-style: none;}
+
+    section{
+      width: 1400px;
+      margin: 0px auto;
+      position: relative;
+    }
+
+    section > h1{
+      text-align:center;
+      padding: 35px 0px;
+      font-size: 26px;
+      background:#524A4E ; color: #fff;
+      border-radius: 20px;
+      margin: 20px 0px;
+    }
+
+    article.html{
+      width: 48%;
+      border: 3px solid #c00;
+      position:absolute; left: 0px;
+    }
+
+
+    article.java{
+      width: 48%;
+      position: absolute; right: 0px;
+    }
+
+    h2{
+      text-align:center;
+      padding: 30px; margin: 20px 0px;
+      border-radius: 10px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+
+    .java > h2{
+      color:#222; background: #c0d8c0;
+    }
+    .c_wrap > li{
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      background: #c0d8c0c7; color:#333;
+      line-height: 65px;
+      /* margin-bottom:10px; */
+      text-indent: 30px;
+    }
+
+    .sub > li{
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 55px;
+      background: #F5EEDC;
+    }
+
+    .sub > li > a{
+      text-decoration: none;
+      color: #000;
+    }
+
+    .sub > li:hover>a{
+      font-weight:bold;
+    }
+
+  </style>
 </head>
 <body>
-  <h1>자바스크립트 학습하기</h1>
-  <dl>
-    <dt>1일차 학습 - 자바스크립트 기초문법</dt>
-    <dd><a href="./01_자바스크립트 소개와 기초문법_1213.html" title="자바스크립트 소개와 기초문법">01_자바스크립트 소개와 기초문법</a></dd>
-    <dd><a href="./02_자바스크립트 문서출력방법 4가지_1213.html" title="자바스크립트 문서출력방법 4가지">02_자바스크립트 문서출력방법 4가지</a></dd>
-    <dd><a href="./03_자바스크립트로 콘텐츠 제작하기_1213.html" title="콘텐츠 제작 예제">03_자바스크립트로 콘텐츠 제작하기</a></dd>
+  <section>
+    <h1>웹퍼블리싱</h1>
+    <article class="html">
+      <h2>HTML</h2>
+    </article>
+  
+    <article class="java">
+    <h2>Javascript</h2>
+    <ul class="c_wrap">
+      <li>DAY1 - 자바스크립트 기초문법
+        <ul class="sub"> 
+          <li><a href="./01_자바스크립트 소개와 기초문법_1213.html" title="자바스크립트 소개와 기초문법">01_자바스크립트 소개와 기초문법</a></li>
+          <li><a href="./02_자바스크립트 문서출력방법 4가지_1213.html" title="자바스크립트 문서출력방법 4가지">02_자바스크립트 문서출력방법 4가지</a></li>
+          <li><a href="./03_자바스크립트로 콘텐츠 제작하기_1213.html" title="콘텐츠 제작 예제">03_자바스크립트로 콘텐츠 제작하기</a></li>
+        </ul>
+      </li>
+  
+      <li>DAY2
+        <ul class="sub">
+          <li><a href="./04_자바스크립트 실무활용 예제_1214.html">04_자바스크립트 실무활용 예제</a></li>
+        </ul>
+      </li>
+  
+      <li>DAY3
+        <ul class="sub">
+          <li><a href="./05_변수의 개념과 활용_1215.html">05_변수의 개념과 활용</a></li>
+          <li><a href="./06_자바스크립트 연산자.html">06_자바스크립트 연산자</a></li>
+        </ul>
+      </li>
+  
+      <li>DAY4
+        <ul class="sub">
+          <li><a href="./07_데이터의 유형_1218.html" title="데이터유형">07_데이터의 유형</a></li>
+          <li><a href="./08_제어문(control).html" title="제어문">08_제어문(control)</a></li>
+          <li><a href="./실습예제01_if문을 활용한 교보문고 책소개하기_1218.html">실습예제1_if문 활용한 교보문고 책소개하기</a></li>
+        </ul>
+      </li>
+  
+      <li>DAY5
+        <ul class="sub">
+          <li><a href="./실습예제02_if문 활용하기_1219.html">실습예제2_if문 활용한 여행 콘텐츠</a></li>
+          <li><a href="./09_선택문(switch_case).html" title="제어문_선택문(switch case)">제어문_(2)선택문(switch case)</a></li>
+          <li><a href="./10_반복문.html" title="제어문_반복문(while/do while/for)">제어문_(3)반복문(while/do while/for)</a></li>
+          <li><a href="./실습예제03_제어문을 활용한 쇼핑몰 콘텐츠 탭메뉴 구현하기_1219.html" title="반복문을 활용한 쇼핑몰 탭메뉴 구현">실습예제3_반복문을 활용한 쇼핑몰 탭메뉴 구현</a></li>
+        </ul>
+      </li>
 
-    <dt>2일차 학습</dt>
-    <dd><a href="" title=""></a></dd>
+      <li>DAY6
+        <ul class="sub">
+          <li><a href="./11_자바스크립트 함수(function)_1220.html" title="자바스크립트 함수(function)">11_함수(function)</a></li>
+          <li><a href="./12_함수 실습예제_1220.html" title="함수 실습예제_bmi지수 구하기">12_함수 실습예제</a></li>
+          <li><a href="./13_함수 실습예제_모바일 계산기 만들기.html" title="함수 실습예제_모바일 계산기">13_함수 실습예제_모바일 계산기</a></li>
+        </ul>
+      </li>
+    </ul>
+  </article>
+  </section>
 
-    <dt>4일차 학습 - 데이터유형, 제어문(if, else, else if)</dt>
-    <dd><a href="./07_데이터의 유형_1218.html" title="데이터유형">07_데이터의 유형</a></dd>
-    <dd><a href="./08_제어문(control).html" title="제어문">08_제어문(control)</a></dd>
-  </dl>
+  
 </body>
 </html>
