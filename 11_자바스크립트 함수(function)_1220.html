@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>자바스크립트 함수(function)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script>
     //1. 함수 선언하기
     function btn_off(){
@@ -18,10 +19,28 @@
     .p01{
       border: 1px solid #333;
     }
+
+    .back_btn{
+      text-decoration: none;
+      display: inline-block;
+      width: 40px; height: 40px; text-align: center;
+      background: #333;
+      color:#fff;
+      font-size: 30px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px; right: 20px;
+      transition: 0.8s;
+    }
+
+    .back_btn:hover{
+      rotate: 360deg;
+    }
   </style>
 </head>
 <body>
   <h2>자바스크립트 함수(function)</h2>
+  <a href="./javascript.html" title="자바스크립트 수업 노트 목록" class="back_btn"><i class="fa-solid fa-xmark"></i></a>
   <dl>
     <dt>함수(function)란?</dt>
     <dd>함수는 일련의 내용을 삽입하여 사용자가 언제든 호출하여 내용을 실행 할 수 있는 실행문</dd>

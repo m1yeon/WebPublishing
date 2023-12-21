@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>14_함수복습_원하는 숫자까지의 함계를 출력</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .all{
+      margin-left: 20px;
+    }
+    h2{margin-top: 30px;}
+    label{
+      display: inline-block;
+      width: 180px;
+      font-weight: bold;
+    }
+
+    input{
+      height: 30px; border: none;
+      background: #ccc;
+    }
+
+    label.res{
+      letter-spacing: 14.1px;
+    }
+
+    .pre01{
+      border: 1px solid #ccc;
+      width: 500px;
+      color: #fff;
+      background: #333;
+
+    }
+    
+    #res_btn{
+      margin-left: 120px;
+      border-radius:5px; width: 150px; height: 40px;
+      color: #333; background: #ddd; 
+      font-weight: bold; font-size: 17px;
+      transition: 0.5s;}
+
+      #res_btn:hover{
+        color: #fff; background: #333;
+    }
+
+    .blue{color: rgb(102, 140, 197);}
+    .skyblue{color: skyblue;}
+    .yellow{color:rgb(255, 255, 129);}
+    .orange{color: orange;}
+
+    .back_btn{
+      text-decoration: none;
+      display: inline-block;
+      width: 40px; height: 40px; text-align: center;
+      background: #333;
+      color:#fff;
+      font-size: 30px;
+      border-radius: 50%;
+      position: absolute;
+      top: 20px; right: 20px;
+      transition: 0.8s;
+    }
+
+    .back_btn:hover{
+      rotate: 360deg;
+    }
+  </style>
+</head>
+<body>
+  <a href="./javascript.html" title="자바스크립트 수업 노트 목록" class="back_btn"><i class="fa-solid fa-xmark"></i></a>
+
+  <div class="all">
+  <h2>14_함수복습_원하는 숫자까지의 함계를 출력</h2>
+  <p>사용자가 명령프롬프트를 이용하여  숫자를 입력하면<br>
+    1부터 해당하는 숫자까지 합계를 출력해주는 함수를 작성하여 출력해본다.</p>
+
+  <p>
+  <label for="number">합계를 구할 숫자입력 : </label>
+  <input type="text" id="number">
+  </p>
+
+  <p>
+  <label for="'result" class="res">합계 결과 : </label>
+  <input type="text" id="result">
+  </p>
+
+  <p>
+    <input type="button" id="res_btn" value="합계구하기">
+  </p>
+
+  <script>
+    //1. 변수선언
+    let n;
+    let res_b = document.getElementById('res_btn');
+
+    //2.버튼 클릭시 해당 함수가 실행되게 함
+    res_b.addEventListener('click',sum);
+
+    //3. 합계를 구해주는 함수
+    function sum(){
+      s = 0;
+      n = document.getElementById('number').value; 
+      console.log(n);
+
+      // console.log('ablskjdf'); _ 버튼 클릭 테스트
+
+      for(let i=1;i<=n;i++){
+        s = s + i; //누적합계 구하는 수식
+      }
+      document.getElementById('result').value = s;
+    }
+  </script>
+
+  <pre class="pre01">
+
+    <span class="blue">script</span>
+    //1. 변수선언
+    <span class="blue">let</span> <span class="skyblue">n</span>;
+    <span class="blue">let</span> <span class="skyblue">res_b = document</span>.<span class="yellow">getElementById</span><span class="orange">('res_btn')</span>;
+
+    //2.버튼 클릭시 해당 함수가 실행되게 함
+    <span class="skyblue">res_b</span>.<span class="yellow">addEventListener</span>('<span class="orange">click</span>',<span class="yellow">sum</span>);
+
+    //3. 합계를 구해주는 함수
+    <span class="blue">function</span> <span class="yellow">sum</span>(){
+      <span class="skyblue">s</span> = 0;
+      <span class="skyblue">n = document</span>.<span class="yellow">getElementById</span>(<span class="orange">'number'</span>).<span class="skyblue">value</span>; 
+      <span class="skyblue">console</span>.log(n);
+
+      // console.log('ablskjdf'); _ 버튼 클릭 테스트
+
+      <span style="color:rgb(182, 21, 182)">for(</span><span class="blue">let</span><span class="skyblue">i=1;i<=n;i++){
+        s = s + i</span>; //누적합계 구하는 수식
+      }
+      <sapn class="skyblue">document</sapn>.<span class="yellow">getElementById</span>('<span class="orange">result</span>').<span class="skyblue">value = s</span>;
+    }
+    <sapn class="blue">/script</sapn>
+  </pre>
+</div>
+</body>
+</html>
+
