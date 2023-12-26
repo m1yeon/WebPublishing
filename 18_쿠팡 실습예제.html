@@ -1,0 +1,137 @@
+<!doctype html>
+<html lnag="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>자바스크립트_쿠팡 실습예제</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
+
+    <style>
+      *{margin:0px; padding:0px; text-align: center;}
+
+      h2{padding: 30px 0px 15px 0px;}
+
+      #coup{
+        width: 325px; height: 710px;
+        margin: 40px auto;
+        border: 2px solid #ccc;
+        text-align: center;
+        /* overflow: hidden; */
+      }
+
+      #coup > h3{
+        font-size: 22px;
+        padding-top: 20px;
+        color: #ff1e5e;
+      }
+
+      #coup > p{
+        font-size: 24px;
+        padding: 10px 0px 20px 0px;
+      }
+
+      .img_wrap{
+        position: relative;
+      }
+
+      #coup >.img_wrap> img{
+        width: 100%;
+      }
+
+      #left_btn,#right_btn{
+        position: absolute;
+        top: 50%; transform: translateY(-50%);
+        font-size: 28px;
+        color: #efefef;
+        z-index: 999px;
+        background: rgba(0,0,0,.4);
+        padding: 5px 10px;
+      }
+
+      #left_btn{
+        left: 0px;
+      }
+
+      #right_btn{
+        right: 0px;
+      }
+
+      /* 닫기 버튼 */
+      .back_btn{
+      text-decoration: none;
+      display: inline-block;
+      padding: 1px 10px 3px 11px;
+      /* width: 40px; height: 40px; text-align: center; */
+      background: #333;
+      color:#fff;
+      font-size: 30px;
+      border-radius: 50%;
+      position: fixed;
+      top: 20px; right: 20px;
+      transition: 0.8s;
+    }
+
+    .back_btn:hover{
+      rotate: 360deg;
+    }
+    </style>
+  </head>
+
+  <body>
+    <h2>쿠팡 실습예제</h2>
+    <p>새로고침 시 이미지 랜덤 변경 / 좌우 버튼 클릭 시 이미지 변경</p>
+
+    <!-- 닫기 버튼 -->
+  <a href="./javascript.html" title="자바스크립트 수업 노트 목록" class="back_btn"><i class="fa-solid fa-xmark"></i></a>
+
+    <div id="coup">
+      <h3>HOT TREND</h3>
+      <P>추천 광고상품</P>
+      <div class="img_wrap">
+        <img src="./images/1222/product01.png" alt="상품이미지" id="coup_img">
+        <!-- 좌/우 버튼 -->
+        <i class="fa solid fa-angle-left" id="left_btn"></i>
+        <i class="fa solid  fa-chevron-right" id="right_btn"></i>
+      </div>
+    </div>
+
+    <script>
+      //1. 상품 이미지 배열 만들기
+      let coupP = ['product01.png','product02.jpg','product03.jpg','product04.jpg','product05.jpg','product06.jpg','product07.jpg','product08.png','product09.jpg','product10.png'];
+
+      //2. 변수생성
+      const lbtn = document.getElementById('left_btn');
+      const rbtn = document.getElementById('right_btn');
+      let n = 0;
+
+      //3. 좌/우 버튼 클릭 이벤트 생성
+      lbtn.addEventListener('click',function(){
+        // window.alert('left click test');
+        if(n==0){
+          n=9;
+        }else{
+          n--;
+        }
+        document.getElementById('coup_img').src='./images/1222/'+coupP[n];
+      });
+
+      rbtn.addEventListener('click', function(){
+        // window.alert('right click test');
+        if(n==9){
+          n=0;
+        }else{
+          n++;
+        }
+        document.getElementById('coup_img').src=`./images/1222/${coupP[n]}`
+      });
+
+      //4. 새로 고침 시 랜덤 번호로 이미지 주소 변경
+      //4-1. 0~9 까지의 랜덤 번호 생성
+      let ranN = Math.floor(Math.random()*10);
+      document.write(ranN);
+
+      //4-2. 랜덤 번호를 사용해 이미지 주소 변경
+      document.getElementById('coup_img').src=`./images/1222/${coupP[ranN]}`;
+    </script>
+  </body>
+</html>
