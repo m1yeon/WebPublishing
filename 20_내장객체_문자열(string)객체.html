@@ -4,8 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>내장객체_문자열(string)객체</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .wrap{
+      border: 1px solid #ccc;
+      width: 70%;
+      padding: 10px 30px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .wrap > h2{background:#3A84CB; color: #fff;
+      padding: 20px; text-align: center;
+    }
+
+        /* 닫기 버튼 */
+        .back_btn{
+      text-decoration: none;
+      display: inline-block;
+      padding: 1px 10px 3px 11px;
+      /* width: 40px; height: 40px; text-align: center; */
+      background: #fff;
+      color:#3A84CB;
+      font-size: 30px;
+      border-radius: 50%;
+      position: absolute;
+      top: 45px; right: 45px;
+      transition: 0.8s;
+    }
+
+    .back_btn:hover{
+      rotate: 360deg;
+    }
+  </style>
 </head>
 <body>
+  <div class="wrap">
+    <a href="./javascript.html" title="자바스크립트 수업 노트 목록" class="back_btn"><i class="fa-solid fa-xmark"></i></a>
   <h2>내장객체_문자열(string)객체</h2>
   <p>자바스크립트의 내장객체 중에서 활용도가 많은 객체이며, 문자열 값을 인덱스번호를 통해 값을 찾고나 다른 문자로 변경도 가능함</p>
   <p>응용콘텐츠 : 아이디, 패스워드 입력창 문자열 개수 체크, 단문 메세지 문자열 개수 체크, 패스워드 문자열 차장서 다른 문자열로 변경, 이미지 갤러리 등...</p>  
@@ -19,6 +54,7 @@
     <li>length : 문자열의 개수를 체크해줌</li>
     <li>indexof : 문자열과 일치하는 인덱스 번호를 반환</li>
   </ul>
+  <br><hr><br>
 
   <script>
     //변수선언 
@@ -63,11 +99,9 @@
     let fruit = ['사과','배','딸기','수박','바나나','귤'];
     document.write(`<br>${fruit}`);
     let n = fruit.indexOf('수박');
-    document.write(`<br>당신이 좋아하는 과일은 fruit배열에서 ${n}번째 데이터 입니다.`)
-
+    document.write(`<br>당신이 좋아하는 과일은 fruit배열에서 ${n}번째 데이터 입니다.<br>`)
   </script>
-
-
+</div>
 
 </body>
 </html>

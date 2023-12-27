@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>내장객체_문서 객체(document object)</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     .img_box{width: 90%; margin:0px auto;}
     .dom1{width: 49%;}
@@ -12,9 +13,29 @@
       font-weight: bold;
       color: #c00;
     }
+
+    /* 닫기 버튼 */
+    .back_btn{
+      text-decoration: none;
+      display: inline-block;
+      padding: 1px 10px 3px 11px;
+      /* width: 40px; height: 40px; text-align: center; */
+      background: #333;
+      color:#fff;
+      font-size: 30px;
+      border-radius: 50%;
+      position: fixed;
+      top: 15px; right: 15px;
+      transition: 0.8s;
+    }
+
+    .back_btn:hover{
+      rotate: 360deg;
+    }
   </style>
 </head>
 <body>
+  <a href="./javascript.html" title="자바스크립트 수업 노트 목록" class="back_btn"><i class="fa-solid fa-xmark"></i></a>
   <h2>내장객체_문서 객체(document object)</h2>
   <p>DOM(Document Object Model)은 넓은 의미로는 웹브라우저가 html을 인식하는 방법이고, 좁은 의미로는 웹문서안에 있는 요소(객체)들의 집합이다.</p>
   <p>웹브라우저(크롬, 사파리, 파이어폭스, 오페라, 익스플로러, edge,모바일 브라우저)마다 DOM구현이 호환되지 않아서 W3C에서 DOM에 대한 표준규칙을 작성하였다.</p>
